@@ -1,6 +1,62 @@
 # MedMe Copilot Demo
 
-A Streamlit-based demonstration of LLM-powered clinical workflow assistance for pharmacy operations, designed for Senior Product Manager evaluation at MedMe Health.
+## Overview
+
+This is a focused, AI-powered Patient Insight Recommender designed for MedMe Health's pharmacy platform. The app demonstrates how AI can help pharmacy staff proactively identify clinical opportunities and deliver personalized patient care at scale.
+
+**Key Features:**
+- Clean, business-friendly UI
+- No insurance field, no revenue metrics, no LLM/provider selection
+- Only the following patient profile fields: Name, Age, Chronic Conditions, Recent Services, Last Visit
+- Generates clear, actionable clinical recommendations, patient engagement suggestions, risk assessments, and next steps
+- Includes an "AI Reasoning" expander to show how the AI generated its insights
+
+## How It Works
+1. **Select Patient Profile:**
+   - Name (dropdown)
+   - Age (slider)
+   - Chronic Conditions (multi-select)
+   - Recent Services (multi-select)
+   - Last Visit (date)
+2. **Click "Generate AI Patient Insights"**
+3. **Review Results:**
+   - Clinical Recommendations (bulleted, human-readable)
+   - Patient Engagement suggestions
+   - Risk Assessment
+   - Next Steps
+   - "How did the AI Copilot generate these insights?" expander for transparency
+
+## Why This Feature Matters for MedMe
+
+> We built the AI-Powered Patient Insight Recommender to help MedMe's pharmacy partners proactively identify clinical opportunities and deliver more personalized patient care at scale. By analyzing key patient data—such as age, chronic conditions, recent services, and visit history—our feature generates actionable, context-aware recommendations for follow-up, risk management, and patient engagement.
+>
+> This tool directly supports MedMe's mission to streamline pharmacy workflows, improve patient outcomes, and unlock new clinical service revenue. It empowers pharmacy staff to move from reactive to proactive care, ensuring that no patient falls through the cracks and that every clinical opportunity is surfaced at the right time.
+
+## Setup
+
+1. Clone this repo and `cd` into the project directory.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Add your OpenAI and/or Google Gemini API keys to `.streamlit/secrets.toml`:
+   ```toml
+   OPENAI_API_KEY = "sk-..."
+   GOOGLE_API_KEY = "..."
+   ```
+4. Run the app:
+   ```bash
+   streamlit run app.py --server.port 8505
+   ```
+
+## Demo Workflow
+- Change patient parameters and click the button to see how the AI adapts its recommendations.
+- Use the "How did the AI Copilot generate these insights?" expander to show the AI's reasoning and context-awareness.
+
+## Notes
+- No insurance, revenue, or business impact metrics are shown.
+- No LLM/provider selection is exposed to the user; the backend handles all AI logic.
+- The app is designed for a quick, business-focused demo for product and hiring managers at MedMe.
 
 ## 🎯 Overview
 
